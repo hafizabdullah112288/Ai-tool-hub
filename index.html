@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tool Hub — Find the right AI tool, fast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+<div class="bg-grid" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">◆</span>
+    <span class="brand-name">AI Tool Hub</span>
+  </div>
+
+  <div class="quick-access" role="navigation" aria-label="Quick access to AI assistants">
+    <span class="quick-label">Live:</span>
+    <a class="pill pill-chatgpt" href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT</a>
+    <a class="pill pill-claude" href="https://claude.ai" target="_blank" rel="noopener">Claude</a>
+    <a class="pill pill-perplexity" href="https://www.perplexity.ai" target="_blank" rel="noopener">Perplexity</a>
+  </div>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+    <span id="themeIcon">🌙</span>
+  </button>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">A directory, not a rabbit hole</p>
+    <h1>One search bar.<br>Every AI tool that matters.</h1>
+    <p class="subhead">Stop bookmarking twelve tabs. Search, filter by what you're trying to make, and go.</p>
+
+    <div class="search-wrap">
+      <span class="search-icon" aria-hidden="true">⌘</span>
+      <input type="text" id="searchInput" class="search-bar" placeholder="Search tools — try “video” or “Cursor”…" autocomplete="off">
+    </div>
+
+    <div class="categories" id="categoryButtons" role="tablist" aria-label="Open tools by category">
+      <button class="cat-btn cat-image" data-category="image">🎨 Image</button>
+      <button class="cat-btn cat-video" data-category="video">🎬 Video</button>
+      <button class="cat-btn cat-coding" data-category="coding">💻 Coding</button>
+      <button class="cat-btn cat-research" data-category="research">🔎 Deep Research</button>
+    </div>
+  </section>
+
+  <section class="tools" id="toolGrid" aria-live="polite">
+    <!-- Search results injected here by script.js -->
+  </section>
+
+  <p class="empty-state" id="emptyState" hidden>No tools match that search. Try a different word.</p>
+</main>
+
+<!-- Category popup (opens when an Image/Video/Coding/Research button is clicked) -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box" id="modalBox" role="dialog" aria-modal="true">
+    <div class="modal-header">
+      <h2 id="modalTitle">Tools</h2>
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-grid" id="modalGrid"></div>
+  </div>
+</div>
+
+<footer class="owner-card">
+  <div class="owner-info">
+    <p class="owner-eyebrow">Built &amp; maintained by</p>
+    <h2 class="owner-name">Hafiz Muhammad Abdullah</h2>
+    <p class="owner-role">Founder, Hafiz AI Tool Hub</p>
+    <div class="owner-contact">
+      <a href="tel:03298599754">📞 03298599754</a>
+      <a href="mailto:hafizabdullah112288@gmail.com">✉️ hafizabdullah112288@gmail.com</a>
+    </div>
+  </div>
+  <p class="owner-note">New AI tool worth adding? Message me and I'll list it.</p>
+</footer>
+
+<script src="JAVA/script.js"></script>
+</body>
+</html>
